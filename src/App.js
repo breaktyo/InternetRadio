@@ -29,20 +29,22 @@ function App() {
       </header>
 
       <main className="main-content">
-        <RadioPlayer />
+        <section className="radio-player">
+          <RadioPlayer />
+        </section>
 
         {location && (
-          <div>
-            <p>Twoja lokalizacja: {location.latitude}, {location.longitude}</p>
-          </div>
+          <section className="info-section">
+            <p>Twoja lokalizacja: <span>{location.latitude}, {location.longitude}</span></p>
+          </section>
         )}
 
         {browserInfo && (
-          <div>
-            <p>Przeglądarka: {browserInfo.appName}</p>
-            <p>System: {browserInfo.platform}</p>
-            <p>User Agent: {browserInfo.userAgent}</p>
-          </div>
+          <section className="info-section">
+            <p>Przeglądarka: <span>{browserInfo.appName}</span></p>
+            <p>System: <span>{browserInfo.platform}</span></p>
+            <p>User Agent: <span>{browserInfo.userAgent}</span></p>
+          </section>
         )}
       </main>
 
